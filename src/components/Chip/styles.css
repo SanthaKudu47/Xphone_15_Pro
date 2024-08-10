@@ -1,0 +1,219 @@
+/* 
+chip-show 2s->processor 2s      ->4s->light->5s->path static hide->5.2
+            ->led connet-hide   ->4s           ->show paths======->
+
+
+*/
+
+
+
+
+#Chip {
+    opacity: 0;
+    animation-name: showElement;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+}
+
+#processor {
+    opacity: 0;
+    animation-name: showElement;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+}
+
+#lights {
+    opacity: 0;
+    animation-name: showElement;
+    animation-duration: 0.5;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 4.5s;
+}
+
+/* #paths {
+    opacity: 0;
+    animation-name: showElement;
+    animation-duration: 0.2;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+} */
+
+/* #paths_static{
+    opacity: 1;
+    animation-name: hideElement;
+    animation-duration: 0.2;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+} */
+
+#led_connectors {
+    opacity: 1;
+    animation-name: hideElement;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 2s;
+
+
+}
+
+
+/* drawline */
+
+#left_line_1 {
+    stroke-dashoffset: 2000;
+    stroke-dasharray: 2000;
+    animation-name: drawLine;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 5.5s;
+}
+
+/* #right_pulse,
+#left_pulse_1,
+#left_pulse_2,
+#up_pulse_1,
+#up_pulse_2,
+#up_pulse_3,
+#up_pulse_4 {
+    opacity: 0;
+    animation-name: showElement;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: 5.5s;
+} */
+
+
+
+#right_pulse {
+    opacity: 0;
+    animation-delay: 5.7s;
+    animation-name: showElement, pulse, moveToLeft;
+    animation-duration: 0.5s, 2s, 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+#left_pulse_1 {
+    opacity: 0;
+    animation-delay: 6.7s;
+    animation-name: showElement, pulse, moveToRight;
+    animation-duration: 0.5s, 2s, 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+#left_pulse_2 {
+    opacity: 0;
+    animation-delay: 8s;
+    animation-name: showElement, pulse, moveToRight;
+    animation-duration: 0.5s, 1s, 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+#up_pulse_1,
+#up_pulse_2,
+#up_pulse_3,
+#up_pulse_4 {
+    opacity: 0;
+    animation-delay: 7s;
+    animation-name: showElement, pulse, moveToDown;
+    animation-duration: 0.5s, 1.5s, 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+#down_pulse_1,
+#down_pulse_2,
+#down_pulse_3 {
+    opacity: 0;
+    animation-delay: 6.5s;
+    animation-name: showElement, pulse, moveToUp;
+    animation-duration: 0.5s, 1.5s, 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+@keyframes moveToLeft {
+    to {
+        transform: translate(-550px, 0px);
+    }
+}
+
+@keyframes moveToRight {
+    to {
+        transform: translate(550px, 0px);
+    }
+}
+
+@keyframes moveToDown {
+    to {
+        transform: translate(0px, 450px);
+    }
+}
+
+@keyframes moveToUp {
+    to {
+        transform: translate(0px, -450px);
+    }
+}
+
+@keyframes showElement {
+    to {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes hideElement {
+    to {
+        display: none;
+        opacity: 0;
+    }
+}
+
+
+@keyframes drawLine {
+    to {
+        stroke-dashoffset: 0;
+    }
+
+    ;
+
+
+
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    ;
+
+    50% {
+        opacity: 0;
+    }
+
+    ;
+
+    100% {
+        opacity: 1;
+    }
+
+    ;
+}

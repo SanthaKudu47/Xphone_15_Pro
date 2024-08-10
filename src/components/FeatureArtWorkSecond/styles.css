@@ -1,0 +1,223 @@
+#inner {
+    transform: translate(1000px,0px);
+}
+
+#upper_panel {
+    transform: translate(1000px,0px);
+}
+
+#lower_panel {
+    transform: translate(1000px,0px);
+}
+
+#display,
+#screen_panel {
+    transform: translate(1000px,0px);
+
+}
+
+#frame,
+#frame_shadow {
+    opacity: 0;
+}
+
+
+#back_panel,
+#back {
+    opacity: 0;
+}
+
+
+
+#back_panel {
+    animation-name: showElement;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+}
+
+#back {
+    animation-name: showElement;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+}
+
+
+#frame_shadow {
+    animation-name: showElement;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 4s;
+}
+
+
+#magnesium_slot {
+    opacity: 0;
+}
+
+#pulse {
+    visibility: hidden;
+}
+
+#path {
+    visibility: hidden;
+}
+
+#magnesium_slot {
+    animation-name: showElement;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 5s;
+}
+
+#path {
+
+    transform: translate(280px, 0px);
+    animation-name: visibleElement, movePath;
+    animation-duration: 0.5s, 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 6s;
+
+}
+
+#pulse {
+
+    animation-name: visibleElement, movePulse;
+    animation-duration: 0.5s, 1s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 7s;
+}
+
+#frame {
+    animation-name: showElement, colorChange;
+    animation-duration: 1s, 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-delay: 4s, 8s;
+}
+
+#inner{
+    animation-name: attach;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 8s;
+}
+
+#display,
+#screen_panel {
+    animation-name: attach;
+    animation-duration: 0.4s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 9s;
+}
+
+#upper_panel {
+    animation-name: attach;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 9.4s;
+}
+
+#lower_panel {
+    animation-name: attach;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 9.6s;
+}
+
+
+
+
+@keyframes colorChange {
+    0% {
+        fill: #5aacff
+    }
+
+    50% {
+        fill: #202324
+    }
+
+    100% {
+        fill: #6db4ff
+    }
+}
+
+
+
+
+
+
+
+@keyframes movePulse {
+    to {
+        transform: translate(-250px, 0px);
+    }
+
+}
+
+@keyframes movePath {
+    to {
+        transform: translate(0px, 0px);
+    }
+}
+
+@keyframes drawLine {
+
+    to {
+        stroke-dashoffset: 0;
+    }
+
+    ;
+
+}
+
+@keyframes visibleElement {
+
+
+    to {
+
+        visibility: visible;
+    }
+}
+
+
+
+@keyframes showElement {
+
+
+    to {
+
+        opacity: 1;
+    }
+}
+
+
+@keyframes attach {
+
+
+    to {
+        transform: translate(0px,0px);
+    }
+}

@@ -1,0 +1,38 @@
+.c2 {
+
+    height: 30px;
+    width: 30px;
+    right: 50%;
+    transform: translateX(50%);
+    transition: all 0.3s ease-in;
+
+}
+.c1 {
+    height: 50px;
+    width: 50px;
+    right: 50%;
+    transform: translateX(50%);
+    transition: all 0.3s ease-in;
+    background-color: #0071E3;
+}
+
+.links{
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
+}
+
+.visible {
+    opacity: 1;
+}
+
+.active {
+    right: 10px;
+    transform: scale(1.6) translateX(0);
+}
+
+.activeC1 {
+
+    width: 100px;
+    transform: translateX(0);
+    background-color: #374151;
+}

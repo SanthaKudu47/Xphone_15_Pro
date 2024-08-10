@@ -1,0 +1,11 @@
+.effect {
+    transform: translateY(25px);
+    opacity: 0;
+    transition: transform 500ms ease-in, opacity 500ms ease-in;
+
+}
+
+.locate {
+    transform: translateY(0);
+    opacity: 1;
+}

@@ -1,0 +1,60 @@
+#Magnesium {
+    opacity: 0;
+    animation-name: textMotion;
+    animation-duration: 4s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#body,
+#camera_holder,
+#v_up_button,
+#v_down_button {
+    animation-name: drawLine;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+
+}
+
+#action_button {
+    animation-name: drawLine;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-delay: 1s;
+    animation-timing-function: ease-out;
+}
+
+
+
+@keyframes drawLine {
+    /* from {}
+
+    ; */
+
+    to {
+        stroke-dashoffset: 0;
+    }
+
+    ;
+
+}
+
+
+@keyframes textMotion {
+    from {
+        opacity: 0;
+    }
+
+    ;
+
+    to {
+        opacity: 1;
+    }
+
+    ;
+
+}
