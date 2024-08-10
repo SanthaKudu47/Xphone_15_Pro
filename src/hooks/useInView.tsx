@@ -36,7 +36,6 @@ function IntObserverWrapper(
   const interceptionHandler: IntersectionObserverCallback =
     function interceptionHandler(entries, observer) {
       entries.forEach((entry) => {
-        console.log(entry.target);
         if (entry.isIntersecting === true) {
           setInView(true);
           if (options.once === true) {
@@ -55,12 +54,14 @@ function IntObserverWrapper(
   observer.observe(target);
 
   return () => {
-    console.log("Clearing Observer...");
     observer.disconnect(); //clear function
   };
 }
 
-export default function useInInView(targetRef: RefObject<Element>,options?:Options) {
+export default function useInInView(
+  targetRef: RefObject<Element>,
+  options?: Options
+) {
   const [isInView, setInView] = useState<boolean>(false);
 
   useEffect(() => {

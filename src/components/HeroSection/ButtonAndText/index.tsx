@@ -29,7 +29,7 @@ export default function ButtonAndText({
   };
   return (
     <div className={`flex flex-col ${my1[size]}`}>
-      <Effect isInView={isAnimationDone}>
+      <Effect isInView={isAnimationDone} styles="flex">
         <div
           className={`bg-button p-3 rounded-3xl font-base text-white text-center mx-auto  ${btnCls[
             size
@@ -39,7 +39,7 @@ export default function ButtonAndText({
         </div>
       </Effect>
       <div className={`${my2[size]}`}>
-        <Effect isInView={isAnimationDone}>
+        <Effect isInView={isAnimationDone} styles="flex">
           <h3 className={`text-white font-base ${textSize[size]}`}>
             From $999 or $41.62/mo.for 24 mo.
           </h3>

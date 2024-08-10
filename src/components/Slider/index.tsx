@@ -1,9 +1,9 @@
-import { MouseEvent, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Chip from "../Chip";
 import FeatureArtWorkSecond from "../FeatureArtWorkSecond";
+import Slide from "./Slide";
 
 let isDragging = false;
-let currentSlide: HTMLDivElement | null = null;
 
 function getSlidesList(wrapper: HTMLDivElement) {
   const nodeCollection = wrapper.children;
@@ -24,12 +24,9 @@ function initialize(wrapper: HTMLDivElement, slides: HTMLDivElement[]) {
   const react = slide.getBoundingClientRect();
   const margin = (wrapper.clientWidth - react.width) / 2;
 
-  const currentSlide = document.getElementById("slide_1");
-
   for (let index = 0; index < nodeCollection.length; index++) {
     const element = nodeCollection[index];
     if (element.classList.contains("edge_blocks")) {
-      console.log(element);
       const initBlock = element as HTMLDivElement;
       initBlock.style.setProperty("width", `${margin}px`);
     }
@@ -77,14 +74,12 @@ function mouseUpHandler(event: globalThis.MouseEvent) {
     } else {
       //passed
       if (Math.abs(react.left) < react.width) {
-        console.log("passed...", react.left);
         const passedAmount = Math.abs(react.left);
         if (passedAmount > react.width / 2) {
           const nextSlide = document.getElementById(
             `slide_${Number(slide.id.split("_")[1]) + 1}`
           );
-          console.log("next");
-          console.log(nextSlide);
+
           selected = nextSlide;
           break;
         } else {
@@ -107,12 +102,10 @@ function mouseUpHandler(event: globalThis.MouseEvent) {
   if (!selected) return;
   const margin =
     (wrapper.clientWidth - selected.getBoundingClientRect().width) / 2;
-  console.log(selected);
   wrapper.scrollLeft = selected.offsetLeft - margin;
 }
 
 function mouseMoveHandler(event: globalThis.MouseEvent) {
-  //const warapper = event.target.;
   event.preventDefault();
   if (!event.currentTarget) return;
   const wrapper = event.currentTarget as HTMLDivElement;
@@ -158,34 +151,20 @@ export default function Slider() {
   }, [active]);
 
   return (
-    <div className=" flex flex-col justify-center w-full items-center bg-yellow-800">
+    <div className="flex flex-col justify-center w-full items-center">
       <div
-        className="bg-black gap-5 overflow-hidden wrapper w-full flex flex-row scroll-smooth"
+        className="gap-10 overflow-hidden wrapper w-full flex flex-row scroll-smooth"
         ref={wrapperRef}
       >
-        <div className="edge_blocks opacity-0 bg-white flex-shrink-0"></div>
-        <div
-          id="slide_1"
-          className="w-10/12 h-[680px] bg-blue-900  slide relative flex-shrink-0"
-        >
-          <Chip />
-        </div>
-        <div
-          id="slide_2"
-          className="w-10/12 h-[680px] bg-yellow-300  slide relative flex-shrink-0"
-        >
-          <FeatureArtWorkSecond/>
-        </div>
-        <div
-          id="slide_3"
-          className="w-10/12 h-[680px] bg-green-300  slide relative flex-shrink-0"
-        >
-          <Chip />
-        </div>
-        <div className="edge_blocks opacity-0 bg-white flex-shrink-0"></div>
+        <div className="edge_blocks opacity-0flex-shrink-0" />
+        <Slide id="slide_1" />
+        <Slide id="slide_2" />
+        <Slide id="slide_3" />
+        <Slide id="slide_4" />
+        <div className="edge_blocks opacity-0flex-shrink-0" />
       </div>
 
-      <button
+      {/* <button
         onClick={(e) => {
           setActive(active + 1);
         }}
@@ -198,7 +177,7 @@ export default function Slider() {
         }}
       >
         Left
-      </button>
+      </button> */}
     </div>
   );
 }
