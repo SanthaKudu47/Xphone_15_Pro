@@ -1,7 +1,6 @@
 import { useEffect, useRef, useState } from "react";
-import Chip from "../Chip";
-import FeatureArtWorkSecond from "../FeatureArtWorkSecond";
 import Slide from "./Slide";
+import { SlideData } from "../types/common";
 
 let isDragging = false;
 
@@ -43,7 +42,6 @@ function mouseDownHandler(event: globalThis.MouseEvent) {
 }
 
 function mouseUpHandler(event: globalThis.MouseEvent) {
-  console.log("up");
   if (!event.currentTarget) return;
   const wrapper = event.currentTarget as HTMLDivElement;
   isDragging = false;
@@ -114,9 +112,13 @@ function mouseMoveHandler(event: globalThis.MouseEvent) {
   }
 }
 
-export default function Slider() {
+export default function Slider({ data,activeSlide=1 }: { data: SlideData[];activeSlide:number }) {
   const wrapperRef = useRef<HTMLDivElement>(null);
-  const [active, setActive] = useState<number>(1);
+  //const [active, setActive] = useState<number>(1);
+  const active = activeSlide;
+  const maxSlides = data.length;
+
+ 
 
   useEffect(() => {
     if (!wrapperRef.current) return;
@@ -156,12 +158,14 @@ export default function Slider() {
         className="gap-10 overflow-hidden wrapper w-full flex flex-row scroll-smooth"
         ref={wrapperRef}
       >
-        <div className="edge_blocks opacity-0flex-shrink-0" />
-        <Slide id="slide_1" />
-        <Slide id="slide_2" />
-        <Slide id="slide_3" />
-        <Slide id="slide_4" />
-        <div className="edge_blocks opacity-0flex-shrink-0" />
+        <div className="edge_blocks opacity-0 flex-shrink-0" />
+
+        {data.map((element, index) => {
+          return (
+            <Slide id={`slide_${index + 1}`}>{element.slideElement}</Slide>
+          );
+        })}
+        <div className="edge_blocks opacity-0 flex-shrink-0" />
       </div>
 
       {/* <button

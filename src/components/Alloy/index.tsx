@@ -1,6 +1,6 @@
 import "./styles.css";
 
-export default function FeatureArtWorkSecond() {
+export default function Alloy() {
   return (
     <svg
       width="100%"

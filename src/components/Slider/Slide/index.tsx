@@ -1,10 +1,16 @@
-export default function Slide({ id }: { id: string }) {
+export default function Slide({
+  id,
+  children = <>Slide</>,
+}: {
+  id: string;
+  children?: React.ReactNode;
+}) {
   return (
     <div
       id={id}
-      className="w-10/12 h-[450px] sm:h-[680px] bg-blue-900  slide relative flex-shrink-0 sm:rounded-xl"
+      className="w-10/12 h-[450px] sm:h-[680px] slide relative flex-shrink-0 sm:rounded-xl bg-black"
     >
-      slide1
+      {children}
     </div>
   );
 }

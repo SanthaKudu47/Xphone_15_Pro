@@ -1,0 +1,114 @@
+.c2 {
+
+    opacity: 0;
+    height: 30px;
+    width: 30px;
+    right: 50%;
+    transform: translateX(50%);
+    animation: initializeC2;
+    animation-duration: 1000ms;
+    animation-delay: 0s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: paused;
+
+
+}
+
+.c1 {
+    opacity: 0;
+    height: 50px;
+    width: 50px;
+    right: 50%;
+    transform: translateX(50%);
+    background-color: #0071E3;
+    animation: initializeC1;
+    animation-duration: 1000ms;
+    animation-delay: 0s;
+
+    animation-timing-function: ease-in;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: paused;
+
+
+
+}
+
+.play {
+    animation-play-state: running;
+}
+
+.stop {
+    animation-play-state: paused;
+}
+
+.backward {
+    animation-direction: reverse;
+
+}
+
+.forward {}
+
+
+
+
+
+@keyframes initializeC1 {
+    0% {
+        opacity: 0;
+        width: 50px;
+        transform: translateX(50%);
+        background-color: #0071E3;
+    }
+
+    30% {
+        opacity: 1;
+        width: 50px;
+        transform: translateX(50%);
+        background-color: #0071E3;
+    }
+
+    60% {
+        opacity: 1;
+        width: 50px;
+        transform: translateX(50%);
+        background-color: #0071E3;
+    }
+
+    100% {
+        opacity: 1;
+        width: 100px;
+        transform: translateX(0);
+        background-color: #374151;
+    }
+
+}
+
+@keyframes initializeC2 {
+    0% {
+        opacity: 0;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    30% {
+        opacity: 1;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    60% {
+        opacity: 1;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        right: 10px;
+        transform: scale(1.6) translateX(0);
+    }
+
+}

@@ -2,12 +2,34 @@ import playIcon from "../../assets/svgs/play_icon.svg";
 import nextIcon from "../../assets/svgs/next_icon.svg";
 import Effect from "../Effect";
 import useInInView from "../../hooks/useInView";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import Slider from "../Slider";
+import Widget from "../Widget";
+import { slideData } from "../Slider/data/data";
+import WidgetV2 from "../WidgetV2";
 
 export default function Highlights() {
+  const [active, setActive] = useState<number>(1);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInInView(ref, { threshold: "full", once: false });
+  const isInViewForWidget = useInInView(ref, { threshold: "1/2", once: false });
+  const maxSlides = slideData.length;
+
+  function goToNextSlide() {
+    if (active != maxSlides) {
+      setActive(active + 1);
+    }
+  }
+
+  function goToPrevSlide() {
+    if (active != 1) {
+      setActive(active - 1);
+    }
+  }
+
+  function reset() {
+    setActive(active);
+  }
 
   return (
     <>
@@ -46,8 +68,23 @@ export default function Highlights() {
           </div>
         </div>
       </div>
-      <div ref={ref} className="bg-black">
-        <Slider/>
+      <div ref={ref} className="bg-black sm:bg-base">
+        <Slider data={slideData} activeSlide={active} />
+      </div>
+
+      <div
+        className={`w-[300px] h-[200px] mx-auto sticky z-50 bottom-0 flex items-center`}
+      >
+        {/* {
+          <Widget
+            isInView={isInViewForWidget}
+            options={{ data: slideData, setActive }}
+          />
+        } */}
+        <WidgetV2
+          isInView={isInViewForWidget}
+          options={{ data: slideData, setActive }}
+        />
       </div>
     </>
   );
