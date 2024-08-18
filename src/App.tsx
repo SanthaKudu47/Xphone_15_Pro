@@ -1,15 +1,16 @@
 import "./App.css";
 import Colors from "./components/Colors";
+import FullStory from "./components/FullStory";
 import Hero from "./components/HeroSection";
 import Highlights from "./components/Highlights";
-
 
 function App() {
   return (
     <>
       <Hero />
-      <Highlights/>
-      <Colors/>
+      <Highlights />
+      <Colors />
+      <FullStory />
       <div className="bg-green-950 h-[2500px] flex w-full"></div>
     </>
   );

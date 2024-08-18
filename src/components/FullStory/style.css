@@ -1,0 +1,25 @@
+
+.auto_scroll_bg{
+    transform: translateX(calc(var(--scroll)*-1px));
+}
+
+
+
+
+
+
+
+@media screen and ((min-width: 0px) and (max-width:639px)) {
+
+    .top_view_phone {
+        transform: translate(calc(var(--scroll)*-1px), -50px) translate(150px, 0px);
+    }
+
+}
+
+@media screen and ((min-width: 1024px)) {
+
+    .top_view_phone {
+        transform: translate(calc(var(--scrollOfElement1)*-2px), -80px) translate(200px, 0px);
+    }
+}

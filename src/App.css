@@ -1,3 +1,8 @@
-body{
-    background-color:#1E1E1E ;
+body {
+    background-color: #101010;
+}
+
+:root {
+    --scroll: 0;
+    --scrollOfElement1: 0;
 }
