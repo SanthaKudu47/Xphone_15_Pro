@@ -1,8 +1,9 @@
-import React, { RefObject, useEffect, useState } from "react";
+import React, {  RefObject, useEffect, useState } from "react";
 
 type Options = {
   threshold: "init" | "1/2" | "3/4" | "full";
   once?: boolean;
+  rootElement?: Element | Document | null | undefined;
 };
 
 function IntObserverWrapper(
@@ -11,8 +12,10 @@ function IntObserverWrapper(
   options: Options = {
     threshold: "init",
     once: false,
+    rootElement: undefined,
   }
 ) {
+  console.log(target, "45", options);
   const value = options.threshold;
   let t = 0;
   switch (value) {
@@ -49,6 +52,7 @@ function IntObserverWrapper(
 
   const observer = new IntersectionObserver(interceptionHandler, {
     threshold: t,
+    root: options.rootElement,
   });
 
   observer.observe(target);
@@ -68,7 +72,7 @@ export default function useInInView(
     if (!targetRef.current) return;
     console.log("Running Effect On Hook....");
     const clearObserver = IntObserverWrapper(setInView, targetRef.current, {
-      threshold: "1/2",
+      threshold: options?.threshold ? options.threshold : "1/2",
       once: options?.once,
     });
 
