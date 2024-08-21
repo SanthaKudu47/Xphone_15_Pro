@@ -14,7 +14,10 @@ export default function P17ProChip() {
   const isInViewWidget = useInInView(ref, { threshold: "init", once: false });
   return (
     <div className="bg-black-400 w-full relative">
-      <div className="absolute w-full h-1/2  bottom-0 z-0" ref={ref}></div>
+      <div
+        className="absolute left-0 right-0 h-1/2  bottom-0 z-0"
+        ref={ref}
+      ></div>
       <div className="flex flex-col max-w-screen-sm sm:max-w-screen-md  md:max-w-screen-xl px-4 sm:px-5 md:px-6 mx-auto">
         <div className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px] mx-auto mt-[100px] mb-[60px]">
           <img src={p17} alt="p17pro_chip" />

@@ -42,7 +42,7 @@ export default function FullStory() {
     <div className="w-full">
       <div className="flex flex-col max-w-screen-sm sm:max-w-screen-md  md:max-w-screen-xl px-4 sm:px-5 md:px-6 mx-auto">
         <div
-          className="absolute w-full h-1/2 bottom-0 z-0"
+          className="absolute left-0 right-0 h-1/2 bottom-0 z-0"
           ref={widgetVisibleArea}
         ></div>
         <div
@@ -71,7 +71,7 @@ export default function FullStory() {
           <div ref={widgetVisibleArea}>
             <div
               id="scrollArea"
-              className="flex flex-col mx-auto w-full bg-green-500 z-50"
+              className="flex flex-col mx-auto w-full z-50"
               ref={refScrollArea}
             >
               <div className="w-full h-auto overflow-hidden relative">

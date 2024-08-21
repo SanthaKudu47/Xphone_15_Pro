@@ -29,7 +29,7 @@ export default function WidgetV2({
         }`}
       >
         <div
-          className={`flex flex-row gap-x-2 lc_inner  ${
+          className={`flex flex-row gap-x-5 lc_inner  ${
             isInView ? "lc_inner_step_1 " : "lc_inner_step_1 lc_inner_step_2"
           }`}
         >
@@ -37,7 +37,7 @@ export default function WidgetV2({
             return (
               <div
                 key={`dot_${index}`}
-                className={`w-[10px] h-[10px] bg-white  rounded-full cursor-pointer`}
+                className={`w-[20px] h-[20px] bg-white  rounded-full cursor-pointer`}
                 onClick={() => {
                   clickHandlerSlide(index + 1);
                 }}
