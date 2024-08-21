@@ -1,5 +1,3 @@
-import { useState } from "react";
-import all_4_colors from "../../assets/images/all_colors.png";
 import AllColors from "./AllColors";
 import Black from "./Black";
 import Blue from "./Blue";

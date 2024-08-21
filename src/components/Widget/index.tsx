@@ -1,4 +1,3 @@
-import { useEffect, useRef } from "react";
 import { SlideData } from "../types/common";
 import "./styles.css";
 
@@ -29,7 +28,7 @@ export default function Widget({
         }`}
       >
         <div className={`flex gap-x-4`}>
-          {data.map((ele, index) => {
+          {data.map((_ele, index) => {
             return (
               <div
                 className={`w-[10px] h-[10px]  rounded-full links  ${

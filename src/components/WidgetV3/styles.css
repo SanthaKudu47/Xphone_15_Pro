@@ -1,8 +1,12 @@
 .v3_rc {
     width: 0px;
     height: 0px;
-    transform: scale(1,1);
-    background-color:  #2c2d2e;
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
+    background-color: #2c2d2e;
+    -webkit-transition: width 0.3s ease-in 0s, height 0.3s ease-in 0s;
+    -o-transition: width 0.3s ease-in 0s, height 0.3s ease-in 0s;
     transition: width 0.3s ease-in 0s, height 0.3s ease-in 0s;
 
 }
@@ -10,14 +14,22 @@
 .v3_rc_step_1 {
     width: 50px;
     height: 50px;
-    transform: scale(1,1);
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1);
 }
 
 .v3_rc_step_2 {
     width: 0px;
     height: 0px;
-    transform: scale(0,0);
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -webkit-transition: width 0.3s ease-in 0.5s, height 0.3s ease-in 0.5s, -webkit-transform 0.3s ease-in 0.5s;
+    transition: width 0.3s ease-in 0.5s, height 0.3s ease-in 0.5s, -webkit-transform 0.3s ease-in 0.5s;
+    -o-transition: transform 0.3s ease-in 0.5s, width 0.3s ease-in 0.5s, height 0.3s ease-in 0.5s;
     transition: transform 0.3s ease-in 0.5s, width 0.3s ease-in 0.5s, height 0.3s ease-in 0.5s;
+    transition: transform 0.3s ease-in 0.5s, width 0.3s ease-in 0.5s, height 0.3s ease-in 0.5s, -webkit-transform 0.3s ease-in 0.5s;
 
 
 }
@@ -28,6 +40,8 @@
 
 .v3_lc_inner {
     opacity: 0;
+    -webkit-transition: opacity 0.1s ease-in 0.8s;
+    -o-transition: opacity 0.1s ease-in 0.8s;
     transition: opacity 0.1s ease-in 0.8s;
 }
 
@@ -37,6 +51,8 @@
 
 .v3_lc_inner_step_2 {
     opacity: 0;
+    -webkit-transition: opacity 0.1s ease-in 0.0s;
+    -o-transition: opacity 0.1s ease-in 0.0s;
     transition: opacity 0.1s ease-in 0.0s;
 }
 
@@ -51,14 +67,22 @@
     width: 50px;
     height: 50px;
     left: 50%;
+    -webkit-transform: translateX(-50%) scale(1, 1);
+    -ms-transform: translateX(-50%) scale(1, 1);
     transform: translateX(-50%) scale(1, 1);
     background-color: #2c2d2e;
+    -webkit-transition: opacity 0.2s ease-in 0.4s, left 0.3s ease-in 0.5s, width 0.3s ease-in 0.5s, -webkit-transform 0.3s ease-in 0.5s;
+    transition: opacity 0.2s ease-in 0.4s, left 0.3s ease-in 0.5s, width 0.3s ease-in 0.5s, -webkit-transform 0.3s ease-in 0.5s;
+    -o-transition: opacity 0.2s ease-in 0.4s, transform 0.3s ease-in 0.5s, left 0.3s ease-in 0.5s, width 0.3s ease-in 0.5s;
     transition: opacity 0.2s ease-in 0.4s, transform 0.3s ease-in 0.5s, left 0.3s ease-in 0.5s, width 0.3s ease-in 0.5s;
+    transition: opacity 0.2s ease-in 0.4s, transform 0.3s ease-in 0.5s, left 0.3s ease-in 0.5s, width 0.3s ease-in 0.5s, -webkit-transform 0.3s ease-in 0.5s;
 }
 
 .v3_lc_step_1 {
     opacity: 1;
     width: 200px;
+    -webkit-transform: translateX(-50%) scale(1, 1);
+    -ms-transform: translateX(-50%) scale(1, 1);
     transform: translateX(-50%) scale(1, 1);
 
 }
@@ -67,8 +91,14 @@
     opacity: 0;
     width: 50px;
     height: 50px;
+    -webkit-transform: translateX(-50%) scale(1, 1);
+    -ms-transform: translateX(-50%) scale(1, 1);
     transform: translateX(-50%) scale(1, 1);
+    -webkit-transition: opacity 0.2s ease-in 0.3s, left 0.3s ease-in 0.0s, width 0.3s ease-in 0.0s, -webkit-transform 0.3s ease-in 0.0s;
+    transition: opacity 0.2s ease-in 0.3s, left 0.3s ease-in 0.0s, width 0.3s ease-in 0.0s, -webkit-transform 0.3s ease-in 0.0s;
+    -o-transition: opacity 0.2s ease-in 0.3s, transform 0.3s ease-in 0.0s, left 0.3s ease-in 0.0s, width 0.3s ease-in 0.0s;
     transition: opacity 0.2s ease-in 0.3s, transform 0.3s ease-in 0.0s, left 0.3s ease-in 0.0s, width 0.3s ease-in 0.0s;
+    transition: opacity 0.2s ease-in 0.3s, transform 0.3s ease-in 0.0s, left 0.3s ease-in 0.0s, width 0.3s ease-in 0.0s, -webkit-transform 0.3s ease-in 0.0s;
 
 }
 
@@ -76,14 +106,22 @@
     width: 0px;
     height: 0px;
     right: 50%;
+    -webkit-transform: translateX(50%) scale(1, 1);
+    -ms-transform: translateX(50%) scale(1, 1);
     transform: translateX(50%) scale(1, 1);
     background-color: #0071E3;
+    -webkit-transition: width 0.3s ease-in 0.0s, height 0.3s ease-in 0.0s, background-color 0.2s ease-in 0.3s, -webkit-transform 0.5s ease-in 0.3s;
+    transition: width 0.3s ease-in 0.0s, height 0.3s ease-in 0.0s, background-color 0.2s ease-in 0.3s, -webkit-transform 0.5s ease-in 0.3s;
+    -o-transition: width 0.3s ease-in 0.0s, height 0.3s ease-in 0.0s, background-color 0.2s ease-in 0.3s, transform 0.5s ease-in 0.3s;
     transition: width 0.3s ease-in 0.0s, height 0.3s ease-in 0.0s, background-color 0.2s ease-in 0.3s, transform 0.5s ease-in 0.3s;
+    transition: width 0.3s ease-in 0.0s, height 0.3s ease-in 0.0s, background-color 0.2s ease-in 0.3s, transform 0.5s ease-in 0.3s, -webkit-transform 0.5s ease-in 0.3s;
 }
 
 .v3_bc_step_1 {
     width: 75px;
     height: 75px;
+    -webkit-transform: translateX(50%) scale(0);
+    -ms-transform: translateX(50%) scale(0);
     transform: translateX(50%) scale(0);
     background-color: #2c2d2e;
 

@@ -7,34 +7,14 @@ import Effect from "../Effect";
 import useInInView from "../../hooks/useInView";
 import Paragraph from "./paragraph";
 import WidgetV4 from "../WidgetV4";
-
-function getScrollPosition(event: Event) {
-  const root = document.documentElement;
-  const scrollArea = document.getElementById("scrollArea");
-  if (!scrollArea) return;
-  const scrollTop = root.scrollTop + 400;
-  const topOfScrollArea = scrollArea.offsetTop;
-  const scrollAreaHeight = scrollArea.clientHeight;
-  const fullHeight = topOfScrollArea + scrollAreaHeight;
-  if (topOfScrollArea < scrollTop && fullHeight > scrollTop) {
-    const scrollPercentage = Math.min(
-      Math.round(
-        ((scrollTop - topOfScrollArea) / scrollArea.clientHeight) * 100
-      ),
-      100
-    );
-    const scrollXForElement1 = Math.min(scrollPercentage, 70);
-    root.style.setProperty("--scroll", scrollPercentage.toString());
-    root.style.setProperty("--scrollOfElement1", scrollXForElement1.toString()); //--scrollOfElement1
-    console.log(scrollPercentage, scrollXForElement1);
-  }
-}
+import { getScrollPosition } from "../../utils/js/scroll";
 
 export default function FullStory() {
   const refScrollArea = useRef<HTMLDivElement>(null);
   const refOfInViewTrigger = useRef<HTMLDivElement>(null);
   const textArea = useRef<HTMLDivElement>(null);
   const widgetVisibleArea = useRef<HTMLDivElement>(null);
+
   const textInView = useInInView(textArea, {
     threshold: "full",
     once: false,
@@ -44,7 +24,7 @@ export default function FullStory() {
     once: false,
   });
   const isInViewWidget = useInInView(widgetVisibleArea, {
-    threshold: "1/2",
+    threshold: "init",
     once: false,
   });
   useEffect(() => {
@@ -61,6 +41,10 @@ export default function FullStory() {
   return (
     <div className="w-full">
       <div className="flex flex-col max-w-screen-sm sm:max-w-screen-md  md:max-w-screen-xl px-4 sm:px-5 md:px-6 mx-auto">
+        <div
+          className="absolute w-full h-1/2 bottom-0 z-0"
+          ref={widgetVisibleArea}
+        ></div>
         <div
           className="mt-[150px]  mb-[80px]  sm:mb-[100px]"
           ref={refOfInViewTrigger}
@@ -87,7 +71,7 @@ export default function FullStory() {
           <div ref={widgetVisibleArea}>
             <div
               id="scrollArea"
-              className="flex flex-col mx-auto w-full"
+              className="flex flex-col mx-auto w-full bg-green-500 z-50"
               ref={refScrollArea}
             >
               <div className="w-full h-auto overflow-hidden relative">

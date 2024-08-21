@@ -1,37 +1,41 @@
-/* 
-chip-show 2s->processor 2s      ->4s->light->5s->path static hide->5.2
-            ->led connet-hide   ->4s           ->show paths======->
-
-
-*/
-
-
-
-
 #Chip {
-    opacity: 0;
-    animation-name: showElement;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
+        opacity: 0;
+        -webkit-animation-name: showElement;
+        animation-name: showElement;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
 }
 
 #processor {
-    opacity: 0;
-    animation-name: showElement;
-    animation-duration: 2s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
+        opacity: 0;
+        -webkit-animation-name: showElement;
+        animation-name: showElement;
+        -webkit-animation-duration: 2s;
+        animation-duration: 2s;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
 }
 
 #lights {
-    opacity: 0;
-    animation-name: showElement;
-    animation-duration: 0.5;
-    animation-timing-function: ease-out;
-    animation-fill-mode: forwards;
-    animation-delay: 4.5s;
+        opacity: 0;
+        -webkit-animation-name: showElement;
+        animation-name: showElement;
+        -webkit-animation-duration: 0.5;
+        animation-duration: 0.5;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-delay: 4.5s;
+        animation-delay: 4.5s;
 }
 
 /* #paths {
@@ -53,12 +57,17 @@ chip-show 2s->processor 2s      ->4s->light->5s->path static hide->5.2
 } */
 
 #led_connectors {
-    opacity: 1;
-    animation-name: hideElement;
-    animation-duration: 0.2s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 2s;
+        opacity: 1;
+        -webkit-animation-name: hideElement;
+        animation-name: hideElement;
+        -webkit-animation-duration: 0.2s;
+        animation-duration: 0.2s;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
 
 
 }
@@ -67,13 +76,18 @@ chip-show 2s->processor 2s      ->4s->light->5s->path static hide->5.2
 /* drawline */
 
 #left_line_1 {
-    stroke-dashoffset: 2000;
-    stroke-dasharray: 2000;
-    animation-name: drawLine;
-    animation-duration: 3s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-delay: 5.5s;
+        stroke-dashoffset: 2000;
+        stroke-dasharray: 2000;
+        -webkit-animation-name: drawLine;
+        animation-name: drawLine;
+        -webkit-animation-duration: 3s;
+        animation-duration: 3s;
+        -webkit-animation-timing-function: ease-in;
+        animation-timing-function: ease-in;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+        -webkit-animation-delay: 5.5s;
+        animation-delay: 5.5s;
 }
 
 /* #right_pulse,
@@ -94,53 +108,90 @@ chip-show 2s->processor 2s      ->4s->light->5s->path static hide->5.2
 
 
 #right_pulse {
-    opacity: 0;
-    animation-delay: 5.7s;
-    animation-name: showElement, pulse, moveToLeft;
-    animation-duration: 0.5s, 2s, 2s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+        opacity: 0;
+        -webkit-animation-delay: 5.7s;
+        animation-delay: 5.7s;
+        -webkit-animation-name: showElement, pulse, moveToLeft;
+        animation-name: showElement, pulse, moveToLeft;
+        -webkit-animation-duration: 0.5s, 2s, 2s;
+        animation-duration: 0.5s, 2s, 2s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
 }
 
 #left_pulse_1 {
-    opacity: 0;
-    animation-delay: 6.7s;
-    animation-name: showElement, pulse, moveToRight;
-    animation-duration: 0.5s, 2s, 2s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+        opacity: 0;
+        -webkit-animation-delay: 6.7s;
+        animation-delay: 6.7s;
+        -webkit-animation-name: showElement, pulse, moveToRight;
+        animation-name: showElement, pulse, moveToRight;
+        -webkit-animation-duration: 0.5s, 2s, 2s;
+        animation-duration: 0.5s, 2s, 2s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
 }
 
 #left_pulse_2 {
-    opacity: 0;
-    animation-delay: 8s;
-    animation-name: showElement, pulse, moveToRight;
-    animation-duration: 0.5s, 1s, 2s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+        opacity: 0;
+        -webkit-animation-delay: 8s;
+        animation-delay: 8s;
+        -webkit-animation-name: showElement, pulse, moveToRight;
+        animation-name: showElement, pulse, moveToRight;
+        -webkit-animation-duration: 0.5s, 1s, 2s;
+        animation-duration: 0.5s, 1s, 2s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
 }
 
 #up_pulse_1,
 #up_pulse_2,
 #up_pulse_3,
 #up_pulse_4 {
-    opacity: 0;
-    animation-delay: 7s;
-    animation-name: showElement, pulse, moveToDown;
-    animation-duration: 0.5s, 1.5s, 2s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+        opacity: 0;
+        -webkit-animation-delay: 7s;
+        animation-delay: 7s;
+        -webkit-animation-name: showElement, pulse, moveToDown;
+        animation-name: showElement, pulse, moveToDown;
+        -webkit-animation-duration: 0.5s, 1.5s, 2s;
+        animation-duration: 0.5s, 1.5s, 2s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
 }
 
 #down_pulse_1,
 #down_pulse_2,
 #down_pulse_3 {
-    opacity: 0;
-    animation-delay: 6.5s;
-    animation-name: showElement, pulse, moveToUp;
-    animation-duration: 0.5s, 1.5s, 2s;
-    animation-timing-function: ease-out;
-    animation-iteration-count: infinite;
+        opacity: 0;
+        -webkit-animation-delay: 6.5s;
+        animation-delay: 6.5s;
+        -webkit-animation-name: showElement, pulse, moveToUp;
+        animation-name: showElement, pulse, moveToUp;
+        -webkit-animation-duration: 0.5s, 1.5s, 2s;
+        animation-duration: 0.5s, 1.5s, 2s;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+@-webkit-keyframes moveToLeft {
+        to {
+                -webkit-transform: translate(-550px, 0px);
+                transform: translate(-550px, 0px);
+        }
 }
 
 
@@ -149,71 +200,142 @@ chip-show 2s->processor 2s      ->4s->light->5s->path static hide->5.2
 
 
 @keyframes moveToLeft {
-    to {
-        transform: translate(-550px, 0px);
-    }
+        to {
+                -webkit-transform: translate(-550px, 0px);
+                transform: translate(-550px, 0px);
+        }
+}
+
+@-webkit-keyframes moveToRight {
+        to {
+                -webkit-transform: translate(550px, 0px);
+                transform: translate(550px, 0px);
+        }
 }
 
 @keyframes moveToRight {
-    to {
-        transform: translate(550px, 0px);
-    }
+        to {
+                -webkit-transform: translate(550px, 0px);
+                transform: translate(550px, 0px);
+        }
+}
+
+@-webkit-keyframes moveToDown {
+        to {
+                -webkit-transform: translate(0px, 450px);
+                transform: translate(0px, 450px);
+        }
 }
 
 @keyframes moveToDown {
-    to {
-        transform: translate(0px, 450px);
-    }
+        to {
+                -webkit-transform: translate(0px, 450px);
+                transform: translate(0px, 450px);
+        }
+}
+
+@-webkit-keyframes moveToUp {
+        to {
+                -webkit-transform: translate(0px, -450px);
+                transform: translate(0px, -450px);
+        }
 }
 
 @keyframes moveToUp {
-    to {
-        transform: translate(0px, -450px);
-    }
+        to {
+                -webkit-transform: translate(0px, -450px);
+                transform: translate(0px, -450px);
+        }
+}
+
+@-webkit-keyframes showElement {
+        to {
+                display: block;
+                opacity: 1;
+        }
 }
 
 @keyframes showElement {
-    to {
-        display: block;
-        opacity: 1;
-    }
+        to {
+                display: block;
+                opacity: 1;
+        }
+}
+
+@-webkit-keyframes hideElement {
+        to {
+                display: none;
+                opacity: 0;
+        }
 }
 
 @keyframes hideElement {
-    to {
-        display: none;
-        opacity: 0;
-    }
+        to {
+                display: none;
+                opacity: 0;
+        }
+}
+
+
+@-webkit-keyframes drawLine {
+        to {
+                stroke-dashoffset: 0;
+        }
+
+        ;
+
+
+
 }
 
 
 @keyframes drawLine {
-    to {
-        stroke-dashoffset: 0;
-    }
+        to {
+                stroke-dashoffset: 0;
+        }
 
-    ;
+        ;
 
 
 
 }
 
+@-webkit-keyframes pulse {
+        0% {
+                opacity: 1;
+        }
+
+        ;
+
+        50% {
+                opacity: 0;
+        }
+
+        ;
+
+        100% {
+                opacity: 1;
+        }
+
+        ;
+}
+
 @keyframes pulse {
-    0% {
-        opacity: 1;
-    }
+        0% {
+                opacity: 1;
+        }
 
-    ;
+        ;
 
-    50% {
-        opacity: 0;
-    }
+        50% {
+                opacity: 0;
+        }
 
-    ;
+        ;
 
-    100% {
-        opacity: 1;
-    }
+        100% {
+                opacity: 1;
+        }
 
-    ;
+        ;
 }

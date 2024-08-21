@@ -3,23 +3,37 @@
     height: 0px;
     width: 0px;
     right: 50%;
+    -webkit-transform: translateX(50%) scale(1);
+    -ms-transform: translateX(50%) scale(1);
     transform: translateX(50%) scale(1);
+    -webkit-transition: width 0.4s ease-in 0s, height 0.4s ease-in 0s, right 0.4s ease-in 0.6s, -webkit-transform 0.4s ease-in 0.6s;
+    transition: width 0.4s ease-in 0s, height 0.4s ease-in 0s, right 0.4s ease-in 0.6s, -webkit-transform 0.4s ease-in 0.6s;
+    -o-transition: width 0.4s ease-in 0s, height 0.4s ease-in 0s, right 0.4s ease-in 0.6s, transform 0.4s ease-in 0.6s;
     transition: width 0.4s ease-in 0s, height 0.4s ease-in 0s, right 0.4s ease-in 0.6s, transform 0.4s ease-in 0.6s;
+    transition: width 0.4s ease-in 0s, height 0.4s ease-in 0s, right 0.4s ease-in 0.6s, transform 0.4s ease-in 0.6s, -webkit-transform 0.4s ease-in 0.6s;
 }
 
 .active {
     height: 30px;
     width: 30px;
     right: 10px;
+    -webkit-transform: scale(1.6) translateX(0);
+    -ms-transform: scale(1.6) translateX(0);
     transform: scale(1.6) translateX(0);
 }
 
 .inActive {
     height: 0px;
     width: 0px;
+    -webkit-transform: translateX(50%) scale(1);
+    -ms-transform: translateX(50%) scale(1);
     transform: translateX(50%) scale(1);
     right: 50%;
+    -webkit-transition: right 0.4s ease-in 0.0s, width 0.4s ease-in 0.6s, height 0.4s ease-in 0.6s, -webkit-transform 0.4s ease-in 0.0s;
+    transition: right 0.4s ease-in 0.0s, width 0.4s ease-in 0.6s, height 0.4s ease-in 0.6s, -webkit-transform 0.4s ease-in 0.0s;
+    -o-transition: right 0.4s ease-in 0.0s, transform 0.4s ease-in 0.0s, width 0.4s ease-in 0.6s, height 0.4s ease-in 0.6s;
     transition: right 0.4s ease-in 0.0s, transform 0.4s ease-in 0.0s, width 0.4s ease-in 0.6s, height 0.4s ease-in 0.6s;
+    transition: right 0.4s ease-in 0.0s, transform 0.4s ease-in 0.0s, width 0.4s ease-in 0.6s, height 0.4s ease-in 0.6s, -webkit-transform 0.4s ease-in 0.0s;
 
 }
 
@@ -31,11 +45,18 @@
     margin-right: auto;
     margin-left: auto;
     background-color: #0071E3;
+    -webkit-transform-origin: center;
+    -ms-transform-origin: center;
     transform-origin: center;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
     transform: scale(0, 0);
     left: 75px;
-    transition: transform 0.4s ease-in 0.0s, width 0.4s ease-in 0.6s, left 0.4s ease-in 0.6s, background-color 0.4s ease-in 0.6s,
-
+    -webkit-transition: width 0.4s ease-in 0.6s, left 0.4s ease-in 0.6s, background-color 0.4s ease-in 0.6s, -webkit-transform 0.4s ease-in 0.0s;
+    transition: width 0.4s ease-in 0.6s, left 0.4s ease-in 0.6s, background-color 0.4s ease-in 0.6s, -webkit-transform 0.4s ease-in 0.0s;
+    -o-transition: transform 0.4s ease-in 0.0s, width 0.4s ease-in 0.6s, left 0.4s ease-in 0.6s, background-color 0.4s ease-in 0.6s;
+    transition: transform 0.4s ease-in 0.0s, width 0.4s ease-in 0.6s, left 0.4s ease-in 0.6s, background-color 0.4s ease-in 0.6s;
+    transition: transform 0.4s ease-in 0.0s, width 0.4s ease-in 0.6s, left 0.4s ease-in 0.6s, background-color 0.4s ease-in 0.6s, -webkit-transform 0.4s ease-in 0.0s
         /* width: 0px;
     height: 0px;
     right: 38%;
@@ -47,6 +68,8 @@
 }
 
 .activeC1 {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
     transform: scale(1, 1);
     width: 120px;
     left: 0px;
@@ -60,8 +83,14 @@
     background-color: #0071E3;
     left: 75px;
     width: 50px;
+    -webkit-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
     transform: scale(0, 0);
+    -webkit-transition: left 0.4s ease-in 0s, width 0.4s ease-in 0s, background-color 0.4s ease-in 0.0s, -webkit-transform 0.4s ease-in 0.6s;
+    transition: left 0.4s ease-in 0s, width 0.4s ease-in 0s, background-color 0.4s ease-in 0.0s, -webkit-transform 0.4s ease-in 0.6s;
+    -o-transition: left 0.4s ease-in 0s, width 0.4s ease-in 0s, background-color 0.4s ease-in 0.0s, transform 0.4s ease-in 0.6s;
     transition: left 0.4s ease-in 0s, width 0.4s ease-in 0s, background-color 0.4s ease-in 0.0s, transform 0.4s ease-in 0.6s;
+    transition: left 0.4s ease-in 0s, width 0.4s ease-in 0s, background-color 0.4s ease-in 0.0s, transform 0.4s ease-in 0.6s, -webkit-transform 0.4s ease-in 0.6s;
 }
 
 
@@ -69,7 +98,9 @@
 .links {
     opacity: 0;
     background-color: #0071E3;
-    transition: opacity 0.1s ease-in 0.1s, background-color 0.2s ease-in 0.6s,
+    -webkit-transition: opacity 0.1s ease-in 0.1s, background-color 0.2s ease-in 0.6s;
+    -o-transition: opacity 0.1s ease-in 0.1s, background-color 0.2s ease-in 0.6s;
+    transition: opacity 0.1s ease-in 0.1s, background-color 0.2s ease-in 0.6s
 }
 
 .visibleLinks {

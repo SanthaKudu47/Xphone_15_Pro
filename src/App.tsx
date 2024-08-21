@@ -1,4 +1,5 @@
 import "./App.css";
+import Camera from "./components/Camera";
 import Colors from "./components/Colors";
 import FullStory from "./components/FullStory";
 import Hero from "./components/HeroSection";
@@ -12,7 +13,8 @@ function App() {
       <Highlights />
       <Colors />
       <FullStory />
-      <P17ProChip/>
+      <P17ProChip />
+      <Camera />
       <div className="bg-green-950 h-[2500px] flex w-full"></div>
     </>
   );

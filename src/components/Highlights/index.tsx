@@ -4,7 +4,6 @@ import Effect from "../Effect";
 import useInInView from "../../hooks/useInView";
 import { useRef, useState } from "react";
 import Slider from "../Slider";
-import Widget from "../Widget";
 import { slideData } from "../Slider/data/data";
 import WidgetV2 from "../WidgetV2";
 

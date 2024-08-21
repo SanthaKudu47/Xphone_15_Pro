@@ -1,11 +1,19 @@
 .effect {
+    -webkit-transform: translateY(25px);
+    -ms-transform: translateY(25px);
     transform: translateY(25px);
     opacity: 0;
+    -webkit-transition: opacity 500ms ease-in, -webkit-transform 500ms ease-in;
+    transition: opacity 500ms ease-in, -webkit-transform 500ms ease-in;
+    -o-transition: transform 500ms ease-in, opacity 500ms ease-in;
     transition: transform 500ms ease-in, opacity 500ms ease-in;
+    transition: transform 500ms ease-in, opacity 500ms ease-in, -webkit-transform 500ms ease-in;
 
 }
 
 .locate {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
     transform: translateY(0);
     opacity: 1;
 }

@@ -1,18 +1,26 @@
 #inner {
-    transform: translate(1000px,0px);
+    -webkit-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate(1000px, 0px);
 }
 
 #upper_panel {
-    transform: translate(1000px,0px);
+    -webkit-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate(1000px, 0px);
 }
 
 #lower_panel {
-    transform: translate(1000px,0px);
+    -webkit-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate(1000px, 0px);
 }
 
 #display,
 #screen_panel {
-    transform: translate(1000px,0px);
+    -webkit-transform: translate(1000px, 0px);
+    -ms-transform: translate(1000px, 0px);
+    transform: translate(1000px, 0px);
 
 }
 
@@ -30,30 +38,48 @@
 
 
 #back_panel {
+    -webkit-animation-name: showElement;
     animation-name: showElement;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 1s;
     animation-delay: 1s;
 }
 
 #back {
+    -webkit-animation-name: showElement;
     animation-name: showElement;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 3s;
     animation-delay: 3s;
 }
 
 
 #frame_shadow {
+    -webkit-animation-name: showElement;
     animation-name: showElement;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s;
     animation-delay: 4s;
 }
 
@@ -71,80 +97,150 @@
 }
 
 #magnesium_slot {
+    -webkit-animation-name: showElement;
     animation-name: showElement;
+    -webkit-animation-duration: 1s;
     animation-duration: 1s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 5s;
     animation-delay: 5s;
 }
 
 #path {
 
+    -webkit-transform: translate(280px, 0px);
+
+    -ms-transform: translate(280px, 0px);
+
     transform: translate(280px, 0px);
+    -webkit-animation-name: visibleElement, movePath;
     animation-name: visibleElement, movePath;
+    -webkit-animation-duration: 0.5s, 1s;
     animation-duration: 0.5s, 1s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 6s;
     animation-delay: 6s;
 
 }
 
 #pulse {
 
+    -webkit-animation-name: visibleElement, movePulse;
+
     animation-name: visibleElement, movePulse;
+    -webkit-animation-duration: 0.5s, 1s;
     animation-duration: 0.5s, 1s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1, infinite;
     animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 7s;
     animation-delay: 7s;
 }
 
 #frame {
+    -webkit-animation-name: showElement, colorChange;
     animation-name: showElement, colorChange;
+    -webkit-animation-duration: 1s, 3s;
     animation-duration: 1s, 3s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1, infinite;
     animation-iteration-count: 1, infinite;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 4s, 8s;
     animation-delay: 4s, 8s;
 }
 
-#inner{
+#inner {
+    -webkit-animation-name: attach;
     animation-name: attach;
+    -webkit-animation-duration: 0.4s;
     animation-duration: 0.4s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 8s;
     animation-delay: 8s;
 }
 
 #display,
 #screen_panel {
+    -webkit-animation-name: attach;
     animation-name: attach;
+    -webkit-animation-duration: 0.4s;
     animation-duration: 0.4s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 9s;
     animation-delay: 9s;
 }
 
 #upper_panel {
+    -webkit-animation-name: attach;
     animation-name: attach;
+    -webkit-animation-duration: 0.3s;
     animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 9.4s;
     animation-delay: 9.4s;
 }
 
 #lower_panel {
+    -webkit-animation-name: attach;
     animation-name: attach;
+    -webkit-animation-duration: 0.3s;
     animation-duration: 0.3s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 9.6s;
     animation-delay: 9.6s;
+}
+
+
+
+
+@-webkit-keyframes colorChange {
+    0% {
+        fill: #5aacff
+    }
+
+    50% {
+        fill: #202324
+    }
+
+    100% {
+        fill: #6db4ff
+    }
 }
 
 
@@ -170,17 +266,50 @@
 
 
 
-@keyframes movePulse {
+@-webkit-keyframes movePulse {
     to {
+        -webkit-transform: translate(-250px, 0px);
         transform: translate(-250px, 0px);
     }
 
 }
 
-@keyframes movePath {
+
+
+
+
+
+
+@keyframes movePulse {
     to {
+        -webkit-transform: translate(-250px, 0px);
+        transform: translate(-250px, 0px);
+    }
+
+}
+
+@-webkit-keyframes movePath {
+    to {
+        -webkit-transform: translate(0px, 0px);
         transform: translate(0px, 0px);
     }
+}
+
+@keyframes movePath {
+    to {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+@-webkit-keyframes drawLine {
+
+    to {
+        stroke-dashoffset: 0;
+    }
+
+    ;
+
 }
 
 @keyframes drawLine {
@@ -193,12 +322,32 @@
 
 }
 
+@-webkit-keyframes visibleElement {
+
+
+    to {
+
+        visibility: visible;
+    }
+}
+
 @keyframes visibleElement {
 
 
     to {
 
         visibility: visible;
+    }
+}
+
+
+
+@-webkit-keyframes showElement {
+
+
+    to {
+
+        opacity: 1;
     }
 }
 
@@ -214,10 +363,21 @@
 }
 
 
+@-webkit-keyframes attach {
+
+
+    to {
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
+    }
+}
+
+
 @keyframes attach {
 
 
     to {
-        transform: translate(0px,0px);
+        -webkit-transform: translate(0px, 0px);
+        transform: translate(0px, 0px);
     }
 }

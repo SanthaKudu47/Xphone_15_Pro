@@ -1,16 +1,26 @@
+
 .c2 {
 
     opacity: 0;
     height: 30px;
     width: 30px;
     right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
     transform: translateX(50%);
+    -webkit-animation: initializeC2;
     animation: initializeC2;
+    -webkit-animation-duration: 1000ms;
     animation-duration: 1000ms;
+    -webkit-animation-delay: 0s;
     animation-delay: 0s;
+    -webkit-animation-timing-function: ease-in;
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
     animation-direction: normal;
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
 
 
@@ -21,15 +31,25 @@
     height: 50px;
     width: 50px;
     right: 50%;
+    -webkit-transform: translateX(50%);
+    -ms-transform: translateX(50%);
     transform: translateX(50%);
     background-color: #0071E3;
+    -webkit-animation: initializeC1;
     animation: initializeC1;
+    -webkit-animation-duration: 1000ms;
     animation-duration: 1000ms;
+    -webkit-animation-delay: 0s;
     animation-delay: 0s;
 
+    -webkit-animation-timing-function: ease-in;
+
     animation-timing-function: ease-in;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
     animation-direction: normal;
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
 
 
@@ -37,10 +57,12 @@
 }
 
 .play {
+    -webkit-animation-play-state: running;
     animation-play-state: running;
 }
 
 .stop {
+    -webkit-animation-play-state: paused;
     animation-play-state: paused;
 }
 
@@ -55,10 +77,11 @@
 
 
 
-@keyframes initializeC1 {
+@-webkit-keyframes initializeC1 {
     0% {
         opacity: 0;
         width: 50px;
+        -webkit-transform: translateX(50%);
         transform: translateX(50%);
         background-color: #0071E3;
     }
@@ -66,6 +89,7 @@
     30% {
         opacity: 1;
         width: 50px;
+        -webkit-transform: translateX(50%);
         transform: translateX(50%);
         background-color: #0071E3;
     }
@@ -73,6 +97,7 @@
     60% {
         opacity: 1;
         width: 50px;
+        -webkit-transform: translateX(50%);
         transform: translateX(50%);
         background-color: #0071E3;
     }
@@ -80,8 +105,79 @@
     100% {
         opacity: 1;
         width: 100px;
+        -webkit-transform: translateX(0);
         transform: translateX(0);
         background-color: #374151;
+    }
+
+}
+
+
+
+
+
+@keyframes initializeC1 {
+    0% {
+        opacity: 0;
+        width: 50px;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+        background-color: #0071E3;
+    }
+
+    30% {
+        opacity: 1;
+        width: 50px;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+        background-color: #0071E3;
+    }
+
+    60% {
+        opacity: 1;
+        width: 50px;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+        background-color: #0071E3;
+    }
+
+    100% {
+        opacity: 1;
+        width: 100px;
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        background-color: #374151;
+    }
+
+}
+
+@-webkit-keyframes initializeC2 {
+    0% {
+        opacity: 0;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+
+    30% {
+        opacity: 1;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+
+    60% {
+        opacity: 1;
+        right: 50%;
+        -webkit-transform: translateX(50%);
+        transform: translateX(50%);
+    }
+
+    100% {
+        opacity: 1;
+        right: 10px;
+        -webkit-transform: scale(1.6) translateX(0);
+        transform: scale(1.6) translateX(0);
     }
 
 }
@@ -90,24 +186,28 @@
     0% {
         opacity: 0;
         right: 50%;
+        -webkit-transform: translateX(50%);
         transform: translateX(50%);
     }
 
     30% {
         opacity: 1;
         right: 50%;
+        -webkit-transform: translateX(50%);
         transform: translateX(50%);
     }
 
     60% {
         opacity: 1;
         right: 50%;
+        -webkit-transform: translateX(50%);
         transform: translateX(50%);
     }
 
     100% {
         opacity: 1;
         right: 10px;
+        -webkit-transform: scale(1.6) translateX(0);
         transform: scale(1.6) translateX(0);
     }
 

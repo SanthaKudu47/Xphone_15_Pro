@@ -1,5 +1,4 @@
 import React from "react";
-import Chip from "../Chip";
 import CardTitle from "./CardTitle";
 
 export default function Card({

@@ -1,8 +1,12 @@
 #Magnesium {
     opacity: 0;
+    -webkit-animation-name: textMotion;
     animation-name: textMotion;
+    -webkit-animation-duration: 4s;
     animation-duration: 4s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
 }
 
@@ -10,22 +14,49 @@
 #camera_holder,
 #v_up_button,
 #v_down_button {
+    -webkit-animation-name: drawLine;
     animation-name: drawLine;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 1s;
     animation-delay: 1s;
+    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
 
 }
 
 #action_button {
+    -webkit-animation-name: drawLine;
     animation-name: drawLine;
+    -webkit-animation-duration: 2s;
     animation-duration: 2s;
+    -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+    -webkit-animation-fill-mode: forwards;
     animation-fill-mode: forwards;
+    -webkit-animation-delay: 1s;
     animation-delay: 1s;
+    -webkit-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
+}
+
+
+
+@-webkit-keyframes drawLine {
+    /* from {}
+
+    ; */
+
+    to {
+        stroke-dashoffset: 0;
+    }
+
+    ;
+
 }
 
 
@@ -37,6 +68,22 @@
 
     to {
         stroke-dashoffset: 0;
+    }
+
+    ;
+
+}
+
+
+@-webkit-keyframes textMotion {
+    from {
+        opacity: 0;
+    }
+
+    ;
+
+    to {
+        opacity: 1;
     }
 
     ;

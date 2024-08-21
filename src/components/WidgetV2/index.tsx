@@ -33,7 +33,7 @@ export default function WidgetV2({
             isInView ? "lc_inner_step_1 " : "lc_inner_step_1 lc_inner_step_2"
           }`}
         >
-          {data.map((slide, index) => {
+          {data.map((_slide, index) => {
             return (
               <div
                 key={`dot_${index}`}

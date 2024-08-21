@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import Slide from "./Slide";
 import { SlideData } from "../types/common";
 
@@ -112,13 +112,17 @@ function mouseMoveHandler(event: globalThis.MouseEvent) {
   }
 }
 
-export default function Slider({ data,activeSlide=1 }: { data: SlideData[];activeSlide:number }) {
+export default function Slider({
+  data,
+  activeSlide = 1,
+}: {
+  data: SlideData[];
+  activeSlide: number;
+}) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   //const [active, setActive] = useState<number>(1);
   const active = activeSlide;
-  const maxSlides = data.length;
-
- 
+  // const maxSlides = data.length;
 
   useEffect(() => {
     if (!wrapperRef.current) return;

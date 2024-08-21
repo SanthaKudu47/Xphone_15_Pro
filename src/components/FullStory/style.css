@@ -1,5 +1,6 @@
-
-.auto_scroll_bg{
+.auto_scroll_bg {
+    -webkit-transform: translateX(calc(var(--scroll)*-1px));
+    -ms-transform: translateX(calc(var(--scroll)*-1px));
     transform: translateX(calc(var(--scroll)*-1px));
 }
 
@@ -12,6 +13,8 @@
 @media screen and ((min-width: 0px) and (max-width:639px)) {
 
     .top_view_phone {
+        -webkit-transform: translate(calc(var(--scroll)*-1px), -50px) translate(150px, 0px);
+        -ms-transform: translate(calc(var(--scroll)*-1px), -50px) translate(150px, 0px);
         transform: translate(calc(var(--scroll)*-1px), -50px) translate(150px, 0px);
     }
 
@@ -20,6 +23,8 @@
 @media screen and ((min-width: 1024px)) {
 
     .top_view_phone {
+        -webkit-transform: translate(calc(var(--scrollOfElement1)*-2px), -80px) translate(200px, 0px);
+        -ms-transform: translate(calc(var(--scrollOfElement1)*-2px), -80px) translate(200px, 0px);
         transform: translate(calc(var(--scrollOfElement1)*-2px), -80px) translate(200px, 0px);
     }
 }
