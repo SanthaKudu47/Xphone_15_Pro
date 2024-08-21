@@ -14,8 +14,8 @@ function App() {
       <Colors />
       <FullStory />
       <P17ProChip />
-      <Camera />
-      <div className="bg-green-950 h-[2500px] flex w-full"></div>
+      {/* <Camera /> */}
+      {/* <div className="bg-green-950 h-[2500px] flex w-full"></div> */}
     </>
   );
 }
