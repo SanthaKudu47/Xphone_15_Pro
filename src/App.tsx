@@ -1,5 +1,4 @@
 import "./App.css";
-import Camera from "./components/Camera";
 import Colors from "./components/Colors";
 import FullStory from "./components/FullStory";
 import Hero from "./components/HeroSection";
