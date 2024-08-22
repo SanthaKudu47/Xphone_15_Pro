@@ -22,7 +22,7 @@ export default function HeroArtWork({
       const paths = element.childNodes;
       paths.forEach((path) => {
         const element = path as SVGRectElement | SVGPathElement;
-        const length = element.getTotalLength();
+        const length = Number(element.dataset["pathLength"]);
         element.style.strokeDasharray = `${length}`;
         element.style.strokeDashoffset = `${length}`;
       });
@@ -60,6 +60,7 @@ export default function HeroArtWork({
               height="36.3171"
               fill="black"
               stroke="white"
+              data-path-length="1870.63427734375"
             />
             <rect
               id="camera_holder"
@@ -69,6 +70,7 @@ export default function HeroArtWork({
               height="11.0732"
               fill="black"
               stroke="white"
+              data-path-length="446.0003662109375"
             />
             <rect
               id="v_up_button"
@@ -77,6 +79,7 @@ export default function HeroArtWork({
               width="76.9268"
               height="13.2683"
               stroke="white"
+              data-path-length="180.39022827148438"
             />
             <rect
               id="v_down_button"
@@ -85,11 +88,13 @@ export default function HeroArtWork({
               width="76.9268"
               height="13.2683"
               stroke="white"
+              data-path-length="180.39022827148438"
             />
             <path
               id="action_button"
               d="M967.159 138.634C967.159 143.814 962.96 148.012 957.781 148.012C952.601 148.012 948.402 143.814 948.402 138.634C948.402 133.455 952.601 129.256 957.781 129.256C962.96 129.256 967.159 133.455 967.159 138.634Z"
               stroke="white"
+              data-path-length="58.93340301513672"
             />
           </g>
         </g>
@@ -133,6 +138,7 @@ export default function HeroArtWork({
               transform="rotate(-90 161.988 499.5)"
               fill="black"
               stroke="white"
+              data-path-length="1033.317138671875"
             />
             <rect
               id="camera_holder"
@@ -143,6 +149,7 @@ export default function HeroArtWork({
               transform="rotate(-90 156.5 132.427)"
               fill="black"
               stroke="white"
+              data-path-length="244.6591796875"
             />
             <rect
               id="v_up_button"
@@ -152,6 +159,7 @@ export default function HeroArtWork({
               height="6.13415"
               transform="rotate(-90 167.476 98.2805)"
               stroke="white"
+              data-path-length="96.85371398925781"
             />
             <rect
               id="v_down_button"
@@ -161,11 +169,13 @@ export default function HeroArtWork({
               height="6.13415"
               transform="rotate(-90 167.476 154.378)"
               stroke="white"
+              data-path-length="96.85372924804688"
             />
             <path
               id="action_button"
               d="M170.817 15.1341C173.22 15.1341 175.256 17.3164 175.256 20.1219C175.256 22.9275 173.22 25.1097 170.817 25.1097C168.414 25.1097 166.378 22.9275 166.378 20.1219C166.378 17.3164 168.414 15.1341 170.817 15.1341Z"
               stroke="white"
+              data-path-length="29.640810012817383"
             />
           </g>
         </g>

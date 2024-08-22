@@ -1,0 +1,7 @@
+.iguanaImg {
+    opacity: calc(min(var(--scroll), 30)/30);
+    width: 900px;
+    height: 900px;
+    transform: scale(calc(1.0 + max(var(--scroll), 20)/200));
+
+}

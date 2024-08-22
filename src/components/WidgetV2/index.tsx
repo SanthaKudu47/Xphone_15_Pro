@@ -38,6 +38,9 @@ export default function WidgetV2({
               <div
                 key={`dot_${index}`}
                 className={`w-[20px] h-[20px] bg-white  rounded-full cursor-pointer`}
+                onTouchStart={() => {
+                  clickHandlerSlide(index + 1);
+                }}
                 onClick={() => {
                   clickHandlerSlide(index + 1);
                 }}

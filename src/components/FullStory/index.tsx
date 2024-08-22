@@ -2,12 +2,16 @@ import { useEffect, useRef } from "react";
 import "./style.css";
 import svg_large from "../../assets/svgs/mask_large.svg";
 import svg_mask_mobile from "../../assets/svgs/mask_mobile.svg";
-import phone_collection_bg from "../../assets/images/phone_collection.png";
+import phone_collection_bg from "../../assets/images/phone_collection.webp";
 import Effect from "../Effect";
 import useInInView from "../../hooks/useInView";
 import Paragraph from "./paragraph";
 import WidgetV4 from "../WidgetV4";
 import { getScrollPosition } from "../../utils/js/scroll";
+
+const callBack = function () {
+  getScrollPosition("scrollArea");
+};
 
 export default function FullStory() {
   const refScrollArea = useRef<HTMLDivElement>(null);
@@ -29,13 +33,13 @@ export default function FullStory() {
   });
   useEffect(() => {
     if (refScrollArea.current) {
-      window.addEventListener("scroll", getScrollPosition);
-      window.addEventListener("resize", getScrollPosition);
+      window.addEventListener("scroll", callBack);
+      window.addEventListener("resize", callBack);
     }
 
     return () => {
-      window.removeEventListener("scroll", getScrollPosition);
-      window.removeEventListener("resize", getScrollPosition);
+      window.removeEventListener("scroll", callBack);
+      window.removeEventListener("resize", callBack);
     };
   }, []);
   return (
@@ -68,6 +72,7 @@ export default function FullStory() {
               Forged in magnesium.
             </h2>
           </div>
+
           <div ref={widgetVisibleArea}>
             <div
               id="scrollArea"
@@ -86,6 +91,7 @@ export default function FullStory() {
                   className="absolute z-20 sm:hidden"
                 />
                 <div className="absolute auto_scroll_bg w-[930px] sm:w-[950px] md:w-[1100px] lg:w-[1500px]">
+                  <picture></picture>
                   <img src={phone_collection_bg} alt="scrolling_image_set" />
                 </div>
                 <img

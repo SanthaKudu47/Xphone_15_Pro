@@ -12,7 +12,6 @@ export default function Hero() {
   const [isAnimationDone, setAnimationDone] = useState(false);
 
   function animationDone() {
-    console.log("Executed");
     setAnimationDone(true);
   }
 
@@ -38,7 +37,7 @@ export default function Hero() {
       </Container>
 
       <Container size="md" customStylesCls="h-screen">
-      <div className="flex flex-col items-center w-full relative justify-center">
+        <div className="flex flex-col items-center w-full relative justify-center">
           <div className="w-full flex flex-col items-center mx-auto">
             <Header isAnimationDone={isAnimationDone} size="md" />
             <div className="w-full px-20">

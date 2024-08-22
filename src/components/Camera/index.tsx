@@ -1,22 +1,30 @@
+import { useEffect, useRef } from "react";
 import iguana from "../../assets/images/iguana.png";
+import { getScrollPosition } from "../../utils/js/scroll";
+
+import "./index.css";
+
+const callBack = function () {
+  getScrollPosition("scrollAreaImage");
+};
 
 export default function Camera() {
-  //   const refScrollArea = useRef<HTMLDivElement>(null);
-  //   useEffect(() => {
-  //     if (refScrollArea.current) {
-  //       window.addEventListener("scroll", getScrollPosition);
-  //       window.addEventListener("resize", getScrollPosition);
-  //     }
+  const refScrollArea = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    if (refScrollArea.current) {
+      window.addEventListener("scroll", callBack);
+      window.addEventListener("resize", callBack);
+    }
 
-  //     return () => {
-  //       window.removeEventListener("scroll", getScrollPosition);
-  //       window.removeEventListener("resize", getScrollPosition);
-  //     };
-  //   }, []);
+    return () => {
+      window.removeEventListener("scroll", callBack);
+      window.removeEventListener("resize", callBack);
+    };
+  }, []);
+
   return (
     <>
-      <div className="flex flex-col max-w-screen-sm sm:max-w-screen-md  md:max-w-screen-xl px-4 sm:px-5 md:px-6 mx-auto my-5 relative">
-        <div className="z-0  absolute w-full h-full"></div>
+      <div className="flex flex-col max-w-screen-sm sm:max-w-screen-md  md:max-w-screen-xl px-4 sm:px-5 md:px-6 mx-auto my-5">
         <div className="font-base font-bold mx-auto w-[320px] sm:w-full sm:px-8 md:px-24 ">
           <h2 className="text-[40px] text-white text-left md:text-[64px] leading-tight sm:hidden">
             A camera that captures your wildest <br /> imagination.
@@ -30,7 +38,11 @@ export default function Camera() {
           </p>
         </div>
 
-        <div className="">
+        <div
+          ref={refScrollArea}
+          className=" overflow-hidden mx-auto mt-[100px] iguanaImg"
+          id="scrollAreaImage"
+        >
           <img src={iguana} alt="iguana" />
         </div>
       </div>
