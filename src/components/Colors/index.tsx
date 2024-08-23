@@ -10,7 +10,7 @@ export default function Colors() {
   >("all");
 
   const ref = useRef<HTMLDivElement>(null);
-  const isInView = useInInView(ref, { once: false, threshold: "3/4" });
+  const isInView = useInInView(ref, { once: false, threshold: "1/2" });
   const isInViewForText = useInInView(ref, { threshold: "init", once: false });
 
   return (

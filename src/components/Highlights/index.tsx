@@ -2,7 +2,7 @@ import playIcon from "../../assets/svgs/play_icon.svg";
 import nextIcon from "../../assets/svgs/next_icon.svg";
 import Effect from "../Effect";
 import useInInView from "../../hooks/useInView";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Slider from "../Slider";
 import { slideData } from "../Slider/data/data";
 import WidgetV2 from "../WidgetV2";
@@ -13,6 +13,20 @@ export default function Highlights() {
   const refForText = useRef<HTMLDivElement>(null);
   const isInView = useInInView(refForText, { threshold: "1/2", once: false });
   const isInViewForWidget = useInInView(ref, { threshold: "1/2", once: false });
+  const maxSlides = slideData.length;
+
+  useEffect(() => {
+    const timerHandler = setInterval(() => {
+      if (active < maxSlides) {
+        setActive(active + 1);
+      } else {
+        setActive(active - 1);
+      }
+    }, 7000);
+    return () => {
+      clearInterval(timerHandler);
+    };
+  }, [active]);
 
   return (
     <>
@@ -59,7 +73,7 @@ export default function Highlights() {
             </h4>
           </div>
         </div>
-        <div className="bg-black sm:bg-base">
+        <div className="w-full bg-black sm:bg-base">
           <Slider data={slideData} activeSlide={active} />
         </div>
         <div
