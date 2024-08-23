@@ -4,21 +4,23 @@ import magnesium_white_medium from "../../../assets/images/magnesium_white_mediu
 
 export default function White() {
   return (
-    <picture>
-      <source
-        media="(min-width: 0px) and (max-width: 640px)"
-        srcSet={magnesium_white_small}
+    <>
+      {" "}
+      <img
+        src={magnesium_white_small}
+        alt="black_phone_small"
+        className="h-full sm:hidden"
       />
-      <source
-        media="(min-width: 641px) and (max-width: 768px)"
-        srcSet={magnesium_white_medium}
+      <img
+        src={magnesium_white_medium}
+        alt="black_phone_medium"
+        className="h-full hidden sm:block  md:hidden"
       />
-      <source media="(min-width:769px)" srcSet={magnesium_white_large} />
       <img
         src={magnesium_white_large}
-        alt="white_phone"
-        className="h-full"
-      ></img>
-    </picture>
+        alt="black_phone_large"
+        className="h-full hidden md:block"
+      />
+    </>
   );
 }

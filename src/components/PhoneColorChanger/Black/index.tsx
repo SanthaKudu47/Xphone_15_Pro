@@ -3,21 +3,22 @@ import magnesium_black_small from "../../../assets/images/magnesium_black_small.
 import magnesium_black_medium from "../../../assets/images/magnesium_black_medium.png";
 export default function Black() {
   return (
-    <picture>
-      <source
-        media="(min-width: 0px) and (max-width: 640px)"
-        srcSet={magnesium_black_small}
+    <>
+      <img
+        src={magnesium_black_small}
+        alt="black_phone_small"
+        className="h-full sm:hidden"
       />
-      <source
-        media="(min-width: 641px) and (max-width: 768px)"
-        srcSet={magnesium_black_medium}
+      <img
+        src={magnesium_black_medium}
+        alt="black_phone_medium"
+        className="h-full hidden sm:block  md:hidden"
       />
-      <source media="(min-width:769px)" srcSet={magnesium_black_large} />
       <img
         src={magnesium_black_large}
-        alt="black_phone"
-        className="h-full"
-      ></img>
-    </picture>
+        alt="black_phone_large"
+        className="h-full hidden md:block"
+      />
+    </>
   );
 }

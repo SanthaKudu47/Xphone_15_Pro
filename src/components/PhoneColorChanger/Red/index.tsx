@@ -3,17 +3,22 @@ import magnesium_red_small from "../../../assets/images/magnesium_red_small.png"
 import magnesium_red_medium from "../../../assets/images/magnesium_red_medium.png";
 export default function Red() {
   return (
-    <picture>
-      <source
-        media="(min-width: 0px) and (max-width: 640px)"
-        srcSet={magnesium_red_small}
+    <>
+      <img
+        src={magnesium_red_small}
+        alt="black_phone_small"
+        className="h-full sm:hidden"
       />
-      <source
-        media="(min-width: 641px) and (max-width: 768px)"
-        srcSet={magnesium_red_medium}
+      <img
+        src={magnesium_red_medium}
+        alt="black_phone_medium"
+        className="h-full hidden sm:block  md:hidden"
       />
-      <source media="(min-width:769px)" srcSet={magnesium_red_large} />
-      <img src={magnesium_red_large} alt="red_phone" className="h-full"></img>
-    </picture>
+      <img
+        src={magnesium_red_large}
+        alt="black_phone_large"
+        className="h-full hidden md:block"
+      />
+    </>
   );
 }

@@ -3,17 +3,22 @@ import magnesium_blue_small from "../../../assets/images/magnesium_blue_small.pn
 import magnesium_blue_medium from "../../../assets/images/magnesium_blue_medium.png";
 export default function Blue() {
   return (
-    <picture>
-      <source
-        media="(min-width: 0px) and (max-width: 640px)"
-        srcSet={magnesium_blue_small}
+    <>
+      <img
+        src={magnesium_blue_small}
+        alt="black_phone_small"
+        className="h-full sm:hidden"
       />
-      <source
-        media="(min-width: 641px) and (max-width: 768px)"
-        srcSet={magnesium_blue_medium}
+      <img
+        src={magnesium_blue_medium}
+        alt="black_phone_medium"
+        className="h-full hidden sm:block  md:hidden"
       />
-      <source media="(min-width:769px)" srcSet={magnesium_blue_large} />
-      <img src={magnesium_blue_large} alt="blue_phone" className="h-full"></img>
-    </picture>
+      <img
+        src={magnesium_blue_large}
+        alt="black_phone_large"
+        className="h-full hidden md:block"
+      />
+    </>
   );
 }

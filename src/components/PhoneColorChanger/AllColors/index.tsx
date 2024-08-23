@@ -4,17 +4,22 @@ import all_colors_medium from "../../../assets/images/all_colors_medium.png";
 
 export default function AllColors() {
   return (
-    <picture>
-      <source
-        media="(min-width: 0px) and (max-width: 640px)"
-        srcSet={all_colors_small}
+    <div>
+      <img
+        src={all_colors_small}
+        alt="all_colors_small"
+        className="h-full sm:hidden"
       />
-      <source
-        media="(min-width: 641px) and (max-width: 768px)"
-        srcSet={all_colors_medium}
+      <img
+        src={all_colors_medium}
+        alt="all_colors_medium"
+        className="h-full hidden sm:block  md:hidden"
       />
-      <source media="(min-width:769px)" srcSet={all_colors_large} />
-      <img src={all_colors_large} alt="all_colors" className="h-full"></img>
-    </picture>
+      <img
+        src={all_colors_large}
+        alt="all_colors_large"
+        className="h-full hidden md:block"
+      />
+    </div>
   );
 }

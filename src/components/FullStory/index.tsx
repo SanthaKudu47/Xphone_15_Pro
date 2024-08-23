@@ -90,8 +90,10 @@ export default function FullStory() {
                   alt="mask"
                   className="absolute z-20 sm:hidden"
                 />
-                <div className="absolute auto_scroll_bg w-[930px] sm:w-[950px] md:w-[1100px] lg:w-[1500px]">
-                  <picture></picture>
+                <div className="absolute md:hidden w-[930px] sm:w-[950px] md:w-[1100px] lg:w-[1500px]">
+                  <img src={phone_collection_bg} alt="scrolling_image_set" />
+                </div>
+                <div className="absolute auto_scroll_bg w-[930px] sm:w-[950px] md:w-[1100px] lg:w-[1500px] hidden md:block">
                   <img src={phone_collection_bg} alt="scrolling_image_set" />
                 </div>
                 <img
