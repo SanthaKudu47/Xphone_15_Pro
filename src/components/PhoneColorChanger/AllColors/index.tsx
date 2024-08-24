@@ -4,7 +4,7 @@ import all_colors_medium from "../../../assets/images/all_colors_medium.png";
 
 export default function AllColors() {
   return (
-    <div>
+    <div className="mx-auto">
       <img
         src={all_colors_small}
         alt="all_colors_small"

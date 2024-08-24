@@ -1,4 +1,5 @@
 import Alloy from "../../Alloy";
+import MgStatic from "../../../assets/images/magnesium_static.png";
 
 export default function AlloySlide() {
   return (
@@ -10,8 +11,11 @@ export default function AlloySlide() {
           So strong. So light. So Pro.
         </p>
       </div>
-      <div className="flex w-full p-10">
+      <div className="hidden md:flex w-full">
         <Alloy />
+      </div>
+      <div className="md:hidden flex flex-col justify-center items-center">
+        <img className="mx-auto my-auto" src={MgStatic} alt="mg_small" />
       </div>
     </div>
   );
