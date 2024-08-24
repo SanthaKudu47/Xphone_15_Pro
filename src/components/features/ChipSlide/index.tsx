@@ -1,4 +1,5 @@
 import Chip from "../../Chip";
+import ChipStatic from "../../../assets/images/chip_static.png";
 
 export default function ChipSlide() {
   return (
@@ -12,8 +13,11 @@ export default function ChipSlide() {
           Groundbreaking performance.
         </p>
       </div>
-      <div className="flex w-full">
+      <div className="hidden md:flex w-full">
         <Chip />
+      </div>
+      <div className="md:hidden flex flex-col justify-center items-center">
+        <img className="mx-auto my-auto" src={ChipStatic} alt="chip_small" />
       </div>
     </div>
   );

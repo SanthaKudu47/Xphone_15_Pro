@@ -4,6 +4,7 @@ export default function Chip() {
   //const isInView = useInInView(ref);
 
   return (
+    
     <svg
       width="100%"
       height="100%"
