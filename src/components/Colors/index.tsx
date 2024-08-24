@@ -29,7 +29,7 @@ export default function Colors() {
             Take a closer look.
           </Effect>
         </h2>
-        <div className="my-10  sm:my-14">
+        <div className="my-10  sm:my-14 mx-auto">
           <PhoneColorChanger color={selected} />
         </div>
       </div>
